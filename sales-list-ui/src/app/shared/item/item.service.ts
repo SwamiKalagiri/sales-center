@@ -6,13 +6,13 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class ItemService {
-  public API_URL = '//localhost:8080/';
+  public API_URL = '//localhost:8080';
   public ITEMS_API = this.API_URL + '/items';
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
 
-    return this.http.get(this.API_URL + 'getItems');
+    return this.http.get(this.API_URL + '/getItems');
   }
 
   get(id: string) {
